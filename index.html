@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+
+  <div class="container">
+    <!-- Timeblocks go here -->
+    <table class="table table-hover table-borderless">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="timecell">9AM</th>
+          <td class="past" id="nineam" data-time="0900"><textarea id="nineam-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">10AM</th>
+          <td class="past" id="tenam" data-time="1000"><textarea id="tenam-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">11AM</th>
+          <td class="past" id="elevenam" data-time="1100"><textarea id="elevenam-input"></textarea></td>
+          <td class="savebtn" onclick="saveInfo()"></td>
+        </tr>
+        <tr>
+          <th scope="row">12PM</th>
+          <td class="past" id="twelvepm" data-time="1200"><textarea id="twelvepm-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">1PM</th>
+          <td class="past" id="onepm" data-time="1300"><textarea id="onepm-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">2PM</th>
+          <td class="past" id="twopm" data-time="1400"><textarea id="twopm-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">3PM</th>
+          <td class="past" id="threepm" data-time="1500"><textarea id="threepm-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">4PM</th>
+          <td class="past" id="fourpm" data-time="1600"><textarea id="fourpm-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+        <tr>
+          <th scope="row">5PM</th>
+          <td class="future" id="fivepm" data-time="1700"><textarea id="fivepm-input"></textarea></td>
+          <td class="savebtn"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

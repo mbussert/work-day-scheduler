@@ -1,0 +1,110 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+textarea{
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+.description{
+  white-space: pre-wrap;
+}
+
+.time-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.present {
+  background-color: #ff6961;
+  color: black;
+}
+
+.future {
+  background-color: #77dd77;
+  color: black;
+}
+
+/* Custom CSS */
+
+.time-label {
+  background-color: white;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+}
+
+.rowborder {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.savebtn {
+  background-image: url("../svgs/save_btn.svg");
+  background-color: #06AED5;
+  background-repeat: no-repeat;
+  background-size: 1.5vw;
+  background-position: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 4vw;
+}
+
+.savebtn:hover {
+  transition: all .1s ease-in-out;
+  background-size: 1.8vw;
+  background-color: #03bde7;
+  cursor: pointer;
+}
+
+.savebtn:active {
+  background-color: white;
+}
+
+.timecell {
+  width: 3vw;
+  text-align: right;
+}
+
+table {
+  border-spacing: 3px;
+  border-collapse: separate;
+}
