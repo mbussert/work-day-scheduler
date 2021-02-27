@@ -13,12 +13,29 @@ textarea{
   padding: 10px;
 }
 
+.display-3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+header {
+  max-height: 165px;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid black;
+  height: 25vh;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+.container {
+  padding-top: 20px;
 }
 
 .description{
@@ -83,14 +100,14 @@ textarea {
   background-repeat: no-repeat;
   background-size: 1.5vw;
   background-position: center;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  /* border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px; */
   width: 4vw;
 }
 
 .savebtn:hover {
   transition: all .1s ease-in-out;
-  background-size: 1.8vw;
+  background-size: 1.6vw;
   background-color: #03bde7;
   cursor: pointer;
 }

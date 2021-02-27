@@ -5,14 +5,12 @@ function setTime() {
     let getTime = moment().format("dddd, MMMM Do, YYYY, h:mm:ss A");
     dateDisplay.text(getTime);
 
-    setColor();
-
+    setColor(); // Evaluate row color based on time and update every 1 second.
 }
 
 setInterval(function () { setTime(); }, 1000);
 
 // Variables associated with each HTML TD element
-
 let nineAm = $('#nineam').data();
 let tenAm = $('#tenam').data();
 let elevenAm = $('#elevenam').data();
@@ -22,7 +20,6 @@ let twoPm = $('#twopm').data();
 let threePm = $('#threepm').data();
 let fourPm = $('#fourpm').data();
 let fivePm = $('#fivepm').data();
-
 
 // Function to compare time vs. timeslot and update row color accordingly
 function setColor() {
@@ -152,35 +149,43 @@ function setPast() {
 }
 
 // Save Input Fields to Local Storage
+let nineAmInput = $('#nineam-input');
+let tenAmInput = $('#tenam-input');
+let elevenAmInput = $('#elevenam-input');
+let twelvePmInput = $('#twelvepm-input');
+let onePmInput = $('#onepm-input');
+let twoPmInput = $('#twopm-input');
+let threePmInput = $('#threepm-input');
+let fourPmInput = $('#fourpm-input');
+let fivePmInput = $('#fivepm-input');
 
-function saveInfo() {
-    console.log('clicked');
+function saveInfo(event) {
+    event.preventDefault();
+
+    localStorage.setItem("9am", nineAmInput.val());
+    localStorage.setItem("10am", tenAmInput.val());
+    localStorage.setItem("11am", elevenAmInput.val());
+    localStorage.setItem("12pm", twelvePmInput.val());
+    localStorage.setItem("1pm", onePmInput.val());
+    localStorage.setItem("2pm", twoPmInput.val());
+    localStorage.setItem("3pm", threePmInput.val());
+    localStorage.setItem("4pm", fourPmInput.val());
+    localStorage.setItem("5pm", fivePmInput.val());
 }
 
-// function saveHighScore(event) {
-//     event.preventDefault();
+// Pull values from Local Storage and Set to Appropriate Boxes on Page Load
+function loadInfo() {
 
-//     let userInput = {
-//         score: mostRecentScore,
-//         name: username.val()
-//     };
-//     highScores.push(score);
+    $('#nineam-input').text(localStorage.getItem("9am"));
+    $('#tenam-input').text(localStorage.getItem("10am"));
+    $('#elevenam-input').text(localStorage.getItem("11am"));
+    $('#twelvepm-input').text(localStorage.getItem("12pm"));
+    $('#onepm-input').text(localStorage.getItem("1pm"));
+    $('#twopm-input').text(localStorage.getItem("2pm"));
+    $('#threepm-input').text(localStorage.getItem("3pm"));
+    $('#fourpm-input').text(localStorage.getItem("4pm"));
+    $('#fivepm-input').text(localStorage.getItem("5pm"));
 
-//     highScores.sort((a, b) => {
-//         return b.score - a.score;
-//     });
+}
 
-//     highScores.splice(5);
-//     localStorage.setItem("highScores", JSON.stringify(highScores));
-
-//     $("#quiz").css("display", "none");
-//     $("#gameover").css("display", "none");
-//     $("#highscores").css("display", "inline-block");
-//     timeEl.text("0");
-
-//     $("#highscoreslist").append(highScores.map(score => {
-//         return `<li>${score.name} - ${score.score}</li>`
-//     }).join(""))
-
-
-// };
+loadInfo(); // If user has saved info, load into appropriate text area.
