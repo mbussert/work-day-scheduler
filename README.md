@@ -4,7 +4,7 @@
 ### GitHub: [mbussert](https://github.com/mbussert) | Email: mbussert@gmail.com
 
 ## Links:
-Deployed application:   
+Deployed application:  https://mbussert.github.io/work-day-scheduler/  
 GitHub Repository: https://github.com/mbussert/work-day-scheduler
 
 ## Description:
