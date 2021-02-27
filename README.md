@@ -16,5 +16,5 @@ A work day scheduling application created using HTML, CSS, jQuery, Bootstrap, an
 
 ### Pageload -- After 6pm
 ![Pageload](./ss1.png)
-### Morning with Tasks Entered
+### Morning 
 ![Functioning](./ss2.png)
